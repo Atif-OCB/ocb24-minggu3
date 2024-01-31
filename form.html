@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      padding: 10px 14px;
+      border-radius: 200rem;
+    }
+
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+
+    .input-section:hover {
+      background-color: blueviolet;
+    }
+
+    input:focus {
+      outline-color: red;
+    }
+
+    input:disabled {
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <form id="registration-form" onsubmit="javascript:alert('hello')">
+    <div class="input-section">
+      <label for="nama">Nama</label>
+      <input id="nama" name="nama" maxlength="10" required>
+    </div>
+    <div class="input-section">
+      <label for="umur">Umur</label>
+      <input id="umur" name="umur" type="number" min="0">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
