@@ -8,29 +8,29 @@
     input {
       padding: 10px 14px;
       border-radius: 200rem;
+
+      &:focus {
+        outline-color: red;
+      }
+
+      &:disabled {
+        background-color: goldenrod;
+      }
     }
 
     .input-section {
       display: flex;
       flex-direction: column;
       width: 300px;
-    }
 
-    .input-section:hover {
-      background-color: blueviolet;
-    }
-
-    input:focus {
-      outline-color: red;
-    }
-
-    input:disabled {
-      background-color: goldenrod;
+      &:hover {
+        background-color: blueviolet;
+      }
     }
   </style>
 </head>
 <body>
-  <form id="registration-form" onsubmit="javascript:alert('hello')">
+  <form id="registration-form" method="post" action="form.html">
     <div class="input-section">
       <label for="nama">Nama</label>
       <input id="nama" name="nama" maxlength="10" required>

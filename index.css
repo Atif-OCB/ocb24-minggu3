@@ -1,0 +1,39 @@
+* {
+  --kucing-sebelah-rumah-min-w: 0px;
+  --kucing-sebelah-rumah-w: 100%;
+  --kucing-sebelah-rumah-max-w: 1000px;
+  --kucing-sebelah-rumah-width: clamp(var(--kucing-sebelah-rumah-min-w), var(--kucing-sebelah-rumah-w), var(--kucing-sebelah-rumah-max-w));
+  --kucing-sebelah-rumah-bg: burlywood;
+}
+
+p {
+  background-color: var(--kucing-sebelah-rumah-bg);
+  width: var(--kucing-sebelah-rumah-width);
+}
+
+.child {
+  --kucing-sebelah-rumah-bg: aliceblue;
+  width: 200px;
+  height: 200px;
+  background-color: var(--kucing-sebelah-rumah-bg);
+  border: 1px solid red;
+}
+
+h1 {
+  background-color: gold;
+  width: var(--kucing-sebelah-rumah-width);
+}
+
+h1[data-active=true] {
+  background-color: red;
+}
+
+h1::before {
+  content: 'Hello korang'
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+}

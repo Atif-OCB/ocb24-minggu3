@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      border: 1px solid red;
+    }
+
+    body > div  {
+      border: 2px solid black;
+      width: 100%;
+    }
+
+    #listing {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex-basis: calc(100% / 3);
+    }
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+
+    a:focus {
+      background-color: #FFFFFF66;
+    }
+
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+
+    #header-nav {
+      display: flex;
+    }
+
+    #header-nav > a {
+      color: #FFFFFF;
+      opacity: 60%;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    #header-nav > a[data-active=true] {
+      color: #F4D867;
+      opacity: 100%;
+    }
+
+    #header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      max-width: 1200px;
+      background-color: #2A2C2E;
+      padding: 16px 20px;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 992px) {
+      #header {
+        flex-direction: column;
+      }
+
+      #header-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 8px 0px; min-height: 100vh;">
+  <div id="header">
+    <img src="./assets/images/logo.png" alt="Big Bookshelf">
+    <nav id="header-nav">
+      <a href="#" data-active="true">Books</a>
+      <a href="#" data-active="false">Authors</a>
+      <a href="#" data-active="false">What to Read?</a>
+      <a href="#" data-active="false">Gift Ideas</a>
+      <a href="#" data-active="false">About Us</a>
+    </nav>
+    <button id="header-login" style="background-color: #F4CE47; padding: 16px 28px; border-radius: 16px;">
+      Login
+    </button>
+  </div>
+  <div id="banner">Banner</div>
+  <div id="listing" style="flex-grow: 1;">
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+  </div>
+  <div id="footer" style="display: flex; flex-direction: column; max-width: 1200px;">
+    <div id="footer-top" style="display:flex; flex-direction: row;">
+      <div id="footer-logo">
+        Logo
+      </div>
+      <div id="footer-social">
+        Social
+      </div>
+    </div>
+    <div id="footer-bottom" style="display:flex; flex-direction: row;">
+      <div id="footer-term">
+        Term
+      </div>
+      <div id="footer-cta">
+        CTA
+      </div>
+    </div>
+  </div>
+</body>
+</html>
